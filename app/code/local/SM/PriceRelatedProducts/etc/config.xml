@@ -17,4 +17,13 @@
             </sm_pricerelatedproducts>
         </helpers>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <sm_pricerelatedproducts>
+                    <file>pricerelatedproducts/frontend.xml</file>
+                </sm_pricerelatedproducts>
+            </updates>
+        </layout>
+    </frontend>
 </config>
