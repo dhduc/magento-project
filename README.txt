@@ -1,0 +1,2 @@
+#README
+Magento Project	
