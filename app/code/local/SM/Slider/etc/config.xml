@@ -79,4 +79,13 @@
             </updates>
         </layout>
     </adminhtml>
+    <frontend>
+        <layout>
+            <updates>
+                <sm_slider>
+                    <file>slider/frontend.xml</file>
+                </sm_slider>
+            </updates>
+        </layout>
+    </frontend>
 </config>
