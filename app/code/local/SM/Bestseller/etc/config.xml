@@ -26,4 +26,13 @@
             </sm_bestseller>
         </helpers>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <sm_bestseller>
+                    <file>bestseller/frontend.xml</file>
+                </sm_bestseller>
+            </updates>
+        </layout>
+    </frontend>
 </config>
