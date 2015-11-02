@@ -76,4 +76,49 @@
             </block>
         </reference>
     </adminhtml_sm_slide_edit>
+    <!-- Slider -->
+    <adminhtml_sm_slider_index>
+        <reference name="content">
+            <block type="sm_slider/adminhtml_slider" name="sm.slider.admin" />
+        </reference>
+    </adminhtml_sm_slider_index>
+
+    <adminhtml_sm_slider_grid>
+        <block type="sm_slider/adminhtml_slider_grid" name="root"/>
+    </adminhtml_sm_slider_grid>
+
+    <adminhtml_sm_slider_new>
+        <update handle="adminhtml_slider_edit"/>
+    </adminhtml_sm_slider_new>
+
+    <adminhtml_sm_slider_edit>
+        <reference name="head">
+            <action method="addJs">
+                <script>lib/jquery/jquery-1.10.2.min.js</script>
+            </action>
+            <action method="addJs">
+                <script>lib/jquery/noconflict.js</script>
+            </action>
+        </reference>
+        <reference name="js">
+            <block type="core/template" template="slider/grid-inline.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="sm_slider/adminhtml_slider_edit" name="slider_edit"/>
+        </reference>
+        <reference name="left">
+            <block type="sm_slider/adminhtml_slider_edit_tabs" name="slider_edit_tabs">
+                <block type="sm_slider/adminhtml_slider_edit_tab_main" name="slider_edit_tab_main"/>
+                <block type="sm_slider/adminhtml_slider_edit_tab_content" name="slider_edit_tab_content"/>
+                <action method="addTab">
+                    <name>main_section</name>
+                    <block>slider_edit_tab_main</block>
+                </action>
+                <action method="addTab">
+                    <name>content_section</name>
+                    <block>slider_edit_tab_content</block>
+                </action>
+            </block>
+        </reference>
+    </adminhtml_sm_slider_edit>
 </layout>
