@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <smart_tab module="sm_slider" translate="label">
+            <label>Smart</label>
+            <sort_order>10</sort_order>
+        </smart_tab>
+    </tabs>
+    <sections>
+        <sm_slider_config module="sm_slider" translate="label">
+            <label>Slider</label>
+            <tab>smart_tab</tab>
+            <front_type>text</front_type>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <implement translate="label">
+                    <label>Guides Setup</label>
+                    <frontend_model>sm_slider/adminhtml_system_configuration_implement</frontend_model>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </implement>
+            </groups>
+        </sm_slider_config>
+    </sections>
+</config>
