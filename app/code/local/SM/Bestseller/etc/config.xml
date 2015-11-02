@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SM_Bestseller>
+            <version>0.1.0</version>
+        </SM_Bestseller>
+    </modules>
+    <global>
+        <models>
+            <sm_bestseller>
+                <class>SM_Bestseller_Model</class>
+                <resourceModel>sm_bestseller_resource</resourceModel>
+            </sm_bestseller>
+            <sm_bestseller_resource>
+                <class>SM_Bestseller_Model_Resource</class>
+            </sm_bestseller_resource>
+        </models>
+        <blocks>
+            <sm_bestseller>
+                <class>SM_Bestseller_Block</class>
+            </sm_bestseller>
+        </blocks>
+        <helpers>
+            <sm_bestseller>
+                <class>SM_Bestseller_Helper</class>
+            </sm_bestseller>
+        </helpers>
+    </global>
+</config>
