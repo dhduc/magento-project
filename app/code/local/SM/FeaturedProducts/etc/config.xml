@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SM_FeaturedProducts>
+            <version>0.1.0</version>
+        </SM_FeaturedProducts>
+    </modules>
+    <global>
+        <models>
+            <sm_featuredproducts>
+                <class>SM_FeaturedProducts_Model</class>
+                <resourceModel>sm_featuredproducts_resource</resourceModel>
+            </sm_featuredproducts>
+            <sm_featuredproducts_resource>
+                <class>SM_FeaturedProducts_Model_Resource</class>
+            </sm_featuredproducts_resource>
+        </models>
+        <blocks>
+            <sm_featuredproducts>
+                <class>SM_FeaturedProducts_Block</class>
+            </sm_featuredproducts>
+        </blocks>
+        <helpers>
+            <sm_featuredproducts>
+                <class>SM_FeaturedProducts_Helper</class>
+            </sm_featuredproducts>
+        </helpers>
+        <resources>
+            <sm_featuredproducts_setup>
+                <setup>
+                    <module>SM_FeaturedProducts</module>
+                </setup>
+            </sm_featuredproducts_setup>
+        </resources>
+    </global>
+</config>
