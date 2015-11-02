@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout>
+    <slick_plugin_resources>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/slick/slick.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/slick/slick-theme.css</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/slick/slick.js</name></action>
+        </reference>
+    </slick_plugin_resources>
+    <default>
+        <update handle="slick_plugin_resources"/>
+    </default>
+</layout>
