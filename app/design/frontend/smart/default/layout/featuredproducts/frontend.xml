@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <add_resource_to_featured_slider>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/featuredproducts/slider.css</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/featuredproducts/slider.js</name></action>
+        </reference>
+    </add_resource_to_featured_slider>
+    <cms_page>
+        <update handle="add_resource_to_featured_slider"/>
+        <reference name="content">
+            <block type="sm_featuredproducts/featuredproducts" name="sm.featuredproducts" template="featuredproducts/slider.phtml" />
+        </reference>
+    </cms_page>
+    <catalog_category_default>
+        <update handle="add_resource_to_featured_slider"/>
+        <reference name="content">
+            <block type="sm_featuredproducts/featuredproducts" name="sm.featuredproducts" template="featuredproducts/slider.phtml" />
+        </reference>
+    </catalog_category_default>
+</layout>

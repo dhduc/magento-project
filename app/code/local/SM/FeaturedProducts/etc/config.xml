@@ -34,4 +34,13 @@
             </sm_featuredproducts_setup>
         </resources>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <sm_featuredproducts>
+                    <file>featuredproducts/frontend.xml</file>
+                </sm_featuredproducts>
+            </updates>
+        </layout>
+    </frontend>
 </config>
