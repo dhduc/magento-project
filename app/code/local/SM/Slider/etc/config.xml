@@ -5,6 +5,20 @@
             <version>0.1.0</version>
         </SM_Slider>
     </modules>
+     <stores>
+        <admin>
+            <design>
+                <package>
+                    <name>default</name>
+                </package>
+                <theme>
+                    <template>smart</template>
+                    <skin>smart</skin>
+                    <layout>smart</layout>
+                </theme>
+            </design>
+        </admin>
+    </stores>
     <global>
         <models>
             <sm_slider>
@@ -45,4 +59,24 @@
             </sm_slider_setup>
         </resources>
     </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <SM_Slider before="Mage_Adminhtml">SM_Slider_Adminhtml</SM_Slider>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <sm_slider>
+                    <file>slider/admin.xml</file>
+                </sm_slider>
+            </updates>
+        </layout>
+    </adminhtml>
 </config>

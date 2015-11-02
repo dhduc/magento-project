@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<layout>
+    <editor>
+        <reference name="head">
+            <action method="setCanLoadExtJs">
+                <flag>1</flag>
+            </action>
+            <action method="setCanLoadTinyMce">
+                <flag>1</flag>
+            </action>
+            <action method="addJs">
+                <script>mage/adminhtml/variables.js</script>
+            </action>
+            <action method="addJs">
+                <script>mage/adminhtml/wysiwyg/widget.js</script>
+            </action>
+            <action method="addJs">
+                <script>lib/flex.js</script>
+            </action>
+            <action method="addJs">
+                <script>lib/FABridge.js</script>
+            </action>
+            <action method="addJs">
+                <script>mage/adminhtml/flexuploader.js</script>
+            </action>
+            <action method="addJs">
+                <script>mage/adminhtml/browser.js</script>
+            </action>
+            <action method="addJs">
+                <script>prototype/window.js</script>
+            </action>
+            <action method="addJs">
+                <script>prototype/prototype.js</script>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>prototype/windows/themes/default.css</name>
+            </action>
+            <action method="addCss">
+                <stylesheet>lib/prototype/windows/themes/magento.css</stylesheet>
+            </action>
+        </reference>
+    </editor>
+    <!-- Slide -->
+    <adminhtml_sm_slide_index>
+        <reference name="content">
+            <block type="sm_slider/adminhtml_slide" name="sm.slide.admin" />
+        </reference>
+    </adminhtml_sm_slide_index>
+
+    <adminhtml_sm_slide_grid>
+        <block type="sm_slider/adminhtml_slide_grid" name="root"/>
+    </adminhtml_sm_slide_grid>
+
+    <adminhtml_sm_slide_new>
+        <update handle="adminhtml_slide_edit"/>
+    </adminhtml_sm_slide_new>
+
+    <adminhtml_sm_slide_edit>
+        <update handle="editor"/>
+        <reference name="content">
+            <block type="sm_slider/adminhtml_slide_edit" name="slide_edit"/>
+        </reference>
+        <reference name="left">
+            <block type="sm_slider/adminhtml_slide_edit_tabs" name="slide_edit_tabs">
+                <block type="sm_slider/adminhtml_slide_edit_tab_main" name="slide_edit_tab_main"/>
+                <block type="sm_slider/adminhtml_slide_edit_tab_content" name="slide_edit_tab_content"/>
+                <action method="addTab">
+                    <name>main_section</name>
+                    <block>slide_edit_tab_main</block>
+                </action>
+                <action method="addTab">
+                    <name>content_section</name>
+                    <block>slide_edit_tab_content</block>
+                </action>
+            </block>
+        </reference>
+    </adminhtml_sm_slide_edit>
+</layout>
