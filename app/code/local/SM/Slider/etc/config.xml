@@ -13,6 +13,17 @@
             </sm_slider>
             <sm_slider_resource>
                 <class>SM_Slider_Model_Resource</class>
+                <entities>
+                    <slider>
+                        <table>sm_slider</table>
+                    </slider>
+                    <slide>
+                        <table>sm_slide</table>
+                    </slide>
+                    <slideshow>
+                        <table>sm_slideshow</table>
+                    </slideshow>
+                </entities>
             </sm_slider_resource>
         </models>
         <blocks>
@@ -29,6 +40,7 @@
             <sm_slider_setup>
                 <setup>
                     <module>SM_Slider</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
                 </setup>
             </sm_slider_setup>
         </resources>
