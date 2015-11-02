@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SM_Slider>
+            <version>0.1.0</version>
+        </SM_Slider>
+    </modules>
+    <global>
+        <models>
+            <sm_slider>
+                <class>SM_Slider_Model</class>
+                <resourceModel>sm_slider_resource</resourceModel>
+            </sm_slider>
+            <sm_slider_resource>
+                <class>SM_Slider_Model_Resource</class>
+            </sm_slider_resource>
+        </models>
+        <blocks>
+            <sm_slider>
+                <class>SM_Slider_Block</class>
+            </sm_slider>
+        </blocks>
+        <helpers>
+            <sm_slider>
+                <class>SM_Slider_Helper</class>
+            </sm_slider>
+        </helpers>
+        <resources>
+            <sm_slider_setup>
+                <setup>
+                    <module>SM_Slider</module>
+                </setup>
+            </sm_slider_setup>
+        </resources>
+    </global>
+</config>
