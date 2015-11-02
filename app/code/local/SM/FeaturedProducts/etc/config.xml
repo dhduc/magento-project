@@ -29,6 +29,7 @@
             <sm_featuredproducts_setup>
                 <setup>
                     <module>SM_FeaturedProducts</module>
+                    <class>SM_FeaturedProducts_Model_Resource_Setup</class>
                 </setup>
             </sm_featuredproducts_setup>
         </resources>
