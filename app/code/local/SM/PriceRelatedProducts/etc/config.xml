@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SM_PriceRelatedProducts>
+            <version>0.1.0</version>
+        </SM_PriceRelatedProducts>
+    </modules>
+    <global>
+        <blocks>
+            <sm_pricerelatedproducts>
+                <class>SM_PriceRelatedProducts_Block</class>
+            </sm_pricerelatedproducts>
+        </blocks>
+        <helpers>
+            <sm_pricerelatedproducts>
+                <class>SM_PriceRelatedProducts_Helper</class>
+            </sm_pricerelatedproducts>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <sm_pricerelatedproducts>
+                    <file>pricerelatedproducts/frontend.xml</file>
+                </sm_pricerelatedproducts>
+            </updates>
+        </layout>
+    </frontend>
+</config>
