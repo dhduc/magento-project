@@ -1,0 +1,28 @@
+<?php
+/**
+ * Display slider of collection slide
+ * @category SM_Slider
+ */
+?>
+<?php
+    $_slides = $this->getCollection();
+?>
+<?php if ($_slides === null): ?>
+    <p class="note-msg"><?php echo $this->__('Slider not invalid'); ?></p>
+<?php else: ?>
+    <?php if (!$_slides->getSize()): ?>
+        <p class="note-msg"><?php echo $this->__('There are no slide matching the selection'); ?></p>
+    <?php else: ?>
+        <div class="slide-slider">
+            <?php foreach ($_slides as $slide): ?>
+                <div class="slide-item">
+                    <?php echo $this->getPhoto($slide); ?>
+                    <div class="text">
+                        <h1><?php echo $slide->getData('slide_title'); ?></h1>
+                        <h3><?php echo $slide->getData('text'); ?></h3>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
+<?php endif; ?>

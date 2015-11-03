@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <add_resource_to_slider>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/slider/slider.css</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/slider/slider.js</name></action>
+        </reference>
+    </add_resource_to_slider>
+    <default>
+        <update handle="add_resource_to_slider"/>
+    </default>
+</layout>

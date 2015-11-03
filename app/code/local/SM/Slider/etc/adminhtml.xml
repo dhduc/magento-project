@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <sm_slider module="sm_slider" translate="title">
+            <title>SM Slider</title>
+            <sort_order>700</sort_order>
+            <children>
+                <sm_slider_management module="sm_slider" translate="title">
+                    <title>Slider Manager</title>
+                    <action>adminhtml/sm_slider/index</action>
+                </sm_slider_management>
+                <sm_slide_management module="sm_slider" translate="title">
+                    <title>Slide Manager</title>
+                    <action>adminhtml/sm_slide/index</action>
+                </sm_slide_management>
+                <sm_slider_config module="sm_slider" translate="title">
+                    <title>Configuration</title>
+                    <action>adminhtml/system_config/edit/section/sm_slider_config/</action>
+                </sm_slider_config>
+            </children>
+        </sm_slider>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <sm_slider module="sm_slider" translate="title">
+                        <title>SM Slider</title>
+                        <sort_order>10</sort_order>
+                        <children>
+                            <sm_slider_management module="sm_slider" translate="title">
+                                <title>Slider Manager</title>
+                                <sort_order>1</sort_order>
+                            </sm_slider_management>
+                            <sm_slide_management module="sm_slider" translate="title">
+                                <title>Slide Manager</title>
+                                <sort_order>2</sort_order>
+                            </sm_slide_management>
+                        </children>
+                    </sm_slider>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <sm_slider_config module="sm_slider" translate="title">
+                                        <title>SM Slider</title>
+                                        <sort_order>10</sort_order>
+                                    </sm_slider_config>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
