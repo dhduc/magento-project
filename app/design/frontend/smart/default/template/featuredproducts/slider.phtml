@@ -1,0 +1,22 @@
+<?php
+/**
+ * Display slider of collection all featured products
+ * @category SM_FeaturedProducts
+ */
+?>
+<?php
+    $_featuredProductCollection = $this->getProductCollection();
+    $_helper = $this->helper('catalog/output');
+?>
+<?php if(!$_featuredProductCollection->getSize()): ?>
+    <p class="note-msg"><?php echo $this->__('There are no featured products matching the selection.') ?></p>
+<?php else: ?>
+    <div class="featured-products-slider">
+        <?php foreach($_featuredProductCollection as $_product): ?>
+            <div class="slide-item">
+                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" width="200" height="200" alt="<?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>"/></a>
+                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>"><?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?></a>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>

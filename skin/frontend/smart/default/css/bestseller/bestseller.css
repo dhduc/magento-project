@@ -1,0 +1,30 @@
+/**
+ * @module SM_Bestseller
+ */
+.bestseller-slider
+{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+.bestseller-slider .slick-slide
+{
+    outline: none;
+}
+.bestseller-slider .slide-item img
+{
+    margin: 0 auto;
+    text-align: center;
+}
+.bestseller-slider .slide-item
+{
+    text-align: center;
+}
+.slick-prev, .slick-next
+{
+    background: #fff;
+}
+.slick-prev:before, .slick-next:before
+{
+    color: #0055cc;
+}

@@ -1,0 +1,22 @@
+/**
+ * @module Price Related Products
+ */
+.relater-product li
+{
+    width: 30%;
+    float: left;
+    clear: none;
+}
+.relater-product .product-image
+{
+    float: left;
+    min-width: 50px;
+}
+.relater-product .product-details .product-name
+{
+    padding-top: 10px;
+}
+.block-related .product-name
+{
+    margin-bottom: 3px;
+}

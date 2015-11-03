@@ -1,0 +1,18 @@
+<script language="JavaScript">
+    //<![CDATA[
+    jQuery.noConflict();
+    var $j = jQuery.noConflict();
+    $j(document).ready(function () {
+        $j("input.order").each(function () {
+            $j(this).prop('disabled', true);
+        });
+        $j("input.checkbox").each(function () {
+            $j(this).removeAttr('disabled');
+            $j(this).closest('tr').find('input:text').attr('disabled', !this.checked);
+        });
+        $j('.data').delegate(':checkbox', 'change', function () {
+            $j(this).closest('tr').find('input:text').attr('disabled', !this.checked);
+        });
+    });
+    //]]>
+</script>

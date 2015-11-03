@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <smart_tab module="sm_bestseller" translate="label">
+            <label>Smart</label>
+            <sort_order>10</sort_order>
+        </smart_tab>
+    </tabs>
+    <sections>
+        <bestseller_config module="sm_bestseller">
+            <label>Bestseller</label>
+            <tab>smart_tab</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>3</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general>
+                    <label>General Setting</label>
+                    <front_type>text</front_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                     <fields>
+                         <number_product translate="label">
+                             <label>Number Product in Slider:</label>
+                             <frontend_type>text</frontend_type>
+                             <sort_order>10</sort_order>
+                             <show_in_default>1</show_in_default>
+                             <show_in_website>1</show_in_website>
+                             <show_in_store>1</show_in_store>
+                             <comment>Number bestseller product in slide show #default 6</comment>
+                         </number_product>
+                    </fields>
+                </general>
+                <implement translate="label">
+                    <label>Guides Setup</label>
+                    <frontend_model>sm_bestseller/adminhtml_system_configuration_implement</frontend_model>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </implement>
+            </groups>
+        </bestseller_config>
+    </sections>
+</config>

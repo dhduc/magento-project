@@ -1,0 +1,23 @@
+<?php
+/**
+ * Display slider of collection all bestseller products
+ * @module SM_Bestseller
+ */
+?>
+<?php
+    $_bestsellerProductCollection = $this->getProductCollection();
+    $_helper = $this->helper('catalog/output');
+?>
+<?php if(!$_bestsellerProductCollection->getSize()): ?>
+    <p class="note-msg"><?php echo $this->__('There are no bestseller products matching the selection.') ?></p>
+<?php else: ?>
+    <h2>Bestseller</h2>
+    <div class="bestseller-slider">
+        <?php foreach($_bestsellerProductCollection as $_product): ?>
+            <div class="slide-item">
+                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" width="200" height="200" alt="<?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>"/></a>
+                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?>"><?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?></a>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>

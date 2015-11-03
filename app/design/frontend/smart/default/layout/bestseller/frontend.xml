@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<layout>
+    <add_resources_to_bestseller_slider>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/bestseller/bestseller.css</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/bestseller/bestseller.js</name></action>
+        </reference>
+    </add_resources_to_bestseller_slider>
+    <cms_page>
+        <update handle="add_resources_to_bestseller_slider"/>
+        <reference name="content">
+            <block type="sm_bestseller/bestseller" name="sm.bestseller" template="bestseller/slider.phtml" />
+        </reference>
+    </cms_page>
+    <catalog_category_layered>
+        <update handle="add_resources_to_bestseller_slider"/>
+        <reference name="content">
+            <block type="sm_bestseller/bestseller" name="sm.bestseller" template="bestseller/slider.phtml" />
+        </reference>
+    </catalog_category_layered>
+</layout>
