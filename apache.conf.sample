@@ -1,0 +1,13 @@
+<VirtualHost *:80> 
+    DocumentRoot "/var/www/magento1"
+    ServerName magento1.local
+    
+    <Directory "/var/www/magento1">
+        Options Indexes FollowSymLinks Includes ExecCGI
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+   </Directory>
+   ErrorLog ${APACHE_LOG_DIR}/magento1_error.log
+   CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
