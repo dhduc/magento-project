@@ -1,0 +1,26 @@
+version: '2'
+services:
+  ubuntu:
+    image: euclid1990/ubuntu-server
+    hostname: server
+    volumes:
+      - .:/var/www/html
+  php:
+    image: euclid1990/php5.6-fpm
+    hostname: php
+    ports:
+      - "1000:9000"
+    volumes_from:
+      - ubuntu
+  nginx:
+    image: nginx
+    hostname: nginx
+    ports:
+      - "1010:80"
+    links:
+      - php
+    volumes_from:
+      - ubuntu
+    volumes:
+      - ./var/log/nginx:/var/log/nginx
+      - ./nginx/conf.d:/etc/nginx/conf.d
